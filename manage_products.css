@@ -1,0 +1,18 @@
+.table img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.btn-group .btn {
+    margin-right: 5px;
+}

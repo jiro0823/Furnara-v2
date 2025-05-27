@@ -1,0 +1,160 @@
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+  body {
+    background-color: #dccbbc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+
+  .container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 900px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+  .login-form {
+    padding: 40px 30px;
+    flex: 1 1 400px;
+    order: 1;
+  }
+
+
+  .login-form h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+
+  .form-control {
+    font-family: "Inria Serif", serif;
+  }
+
+
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #3a2d2d;
+    flex-wrap: wrap;
+  }
+
+
+  .form-options a {
+    margin-top: 5px;
+  }
+
+
+  .form-options input[type="checkbox"] {
+    margin-right: 6px;
+
+  }
+
+
+  .btn {
+    width: 100%;
+    background-color: #1d1a18;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .btn:hover {
+    background-color: #4e4c49;
+  }
+
+
+  .register-link {
+    text-align: center;
+    font-size: 14px;
+    color: #3a2d2d;
+  }
+
+
+  .register-link a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #3a2d2d;
+  }
+
+
+  .image-side {
+    flex: 1 1 400px;
+    background: url("https://i.pinimg.com/736x/61/9e/31/619e31a0773542997871e5c60b195ba2.jpg")
+      no-repeat center center;
+    background-size: cover;
+    order: 2;
+    margin-right: -12px;
+    margin-left: -12px;
+    min-height: 300px;
+  }
+
+
+  .password-wrapper {
+    position: relative;
+  }
+
+
+  .toggle-password {
+    position: absolute;
+    top: 75%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+
+    .login-form {
+      order: 1;
+    }
+
+
+    .image-side {
+      order: 2;
+      height: 250px;
+      border-top: 5px solid #dccbbc;
+    }
+  }

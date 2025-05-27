@@ -1,0 +1,52 @@
+body {
+    font-family: 'Inria Serif', serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+.profile-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background: #fff;
+    padding: 30px 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    display: block;
+    margin: 10px 0;
+    color: #4E342E;;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.btn-custom {
+    background-color: #4E342E;
+    color: white;
+    border: none; /* Optional: remove the border if you prefer */
+}
+
+.btn-outline-custom {
+    border-color: #4E342E;
+    color: #4E342E;
+}
+
+.btn-outline-custom:hover {
+    background-color: #4E342E; /* Add the background color on hover */
+    color: white; /* Change the text color to white on hover */
+    border-color: #4E342E; /* Keep the border color consistent */
+}
+

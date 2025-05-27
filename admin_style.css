@@ -1,0 +1,112 @@
+body {
+            background-color: #f0f2f5;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .sidebar {
+            background-color: #212529;
+            color: #ffffff;
+            height: 100vh;
+            position: fixed;
+            padding-top: 30px;
+            width: 250px;
+            box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        .sidebar h4 {
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            color: #dee2e6;
+            padding: 14px 24px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .sidebar a:hover {
+            background-color: #343a40;
+            color: #ffffff;
+            transform: translateX(4px);
+        }
+
+        .sidebar a i {
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+
+        h3 {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h5 {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        .card h5 i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .display-6 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 15px 0 0;
+            letter-spacing: -1px;
+        }
+
+        @media (max-width: 768px) {
+            .col-md-4 {
+                margin-bottom: 1rem;
+            }
+            
+            .card {
+                height: auto;
+            }
+        }
