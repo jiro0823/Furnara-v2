@@ -1,0 +1,105 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F1EF;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-container {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.form-container h3 {
+    color: #4E342E;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #F8F4F0;
+    outline: none;
+}
+
+.form-btn {
+    background-color: #4E342E;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-btn:hover {
+    background-color: #3B2721;
+}
+
+.form-container p {
+    margin-top: 15px;
+    color: #777;
+}
+
+.form-container a {
+    color: #4E342E;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+.error-msg {
+    margin: 10px 0;
+    display: block;
+    background-color: crimson;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+
+
+
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
+.password-field input {
+    width: 100%;
+}
+.register-location-panel{display:grid;gap:9px;margin:4px 0 12px;padding:14px;border:1px solid #e8e3db;border-radius:12px;background:#fff;text-align:left}.register-location-panel h4{margin:0;color:#262522;font-size:.95rem;font-weight:700}.register-location-panel p,.register-location-panel small{margin:0;color:#77736d;font-size:.76rem;line-height:1.45}.register-location-panel>input,.register-coordinate-fields input{width:100%;min-height:40px;padding:9px 11px;border:1px solid #ded9d0;border-radius:8px;background:#f8f7f4;font:inherit;font-size:.82rem}.register-coordinate-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px}.register-coordinate-fields label{display:grid;gap:4px;color:#625e57;font-size:.72rem;font-weight:650}@media(max-width:460px){.register-coordinate-fields{grid-template-columns:1fr}}
+/* Registration map picker */
+body{height:auto;min-height:100vh;align-items:flex-start;padding:24px 12px}.form-container{max-width:600px}
+.register-location-panel .account-location-picker{display:grid;gap:12px}.register-location-panel .account-location-search{display:flex;gap:8px}.register-location-panel .account-location-search input{min-width:0;flex:1;padding:10px;border:1px solid #ded9d0;border-radius:8px;background:#f8f7f4}.register-location-panel .account-location-search button{padding:0 14px;border:0;border-radius:8px;background:#292d29;color:#fff}.register-location-panel .account-location-map{height:230px;overflow:hidden;border:1px solid #e5e1d9;border-radius:12px;background:#eee}.register-location-panel [data-location-address]{width:100%;min-height:40px;padding:9px 11px;border:1px solid #ded9d0;border-radius:8px;background:#f8f7f4;font:inherit;font-size:.82rem}

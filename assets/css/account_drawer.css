@@ -1,0 +1,23 @@
+.account-drawer-anchor{position:relative;z-index:80;display:flex;align-items:center}
+.account-drawer-trigger,.account-drawer-guest{display:grid;width:2.65rem;height:2.65rem;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;color:#252722;font-size:1.35rem;line-height:1;text-decoration:none;cursor:pointer;transition:background .18s ease,transform .18s ease}
+.account-drawer-trigger:hover,.account-drawer-trigger:focus-visible,.account-drawer-guest:hover{background:#f1f0eb;color:#252722;transform:translateY(-1px);outline:none}
+.account-drawer-menu{position:absolute;top:100%;right:0;z-index:120;width:min(390px,calc(100vw - 24px));overflow:visible;border:1px solid #e8e5dd;border-radius:18px;background:#fff;color:#292d29;box-shadow:0 22px 65px #1a1a162b;animation:account-drawer-in .18s ease both}
+.account-drawer-menu[hidden],.account-drawer-content[hidden]{display:none}
+.account-drawer-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 17px 13px;border-bottom:1px solid #efede8}
+.account-drawer-header>div{display:grid;gap:3px;min-width:0}.account-drawer-header strong{overflow:hidden;font-size:.98rem;text-overflow:ellipsis;white-space:nowrap}.account-drawer-kicker{color:#9a7857;font-size:.61rem;font-weight:750;letter-spacing:.15em}
+.account-drawer-close{display:grid;width:32px;height:32px;flex:0 0 32px;place-items:center;border:1px solid #e9e6df;border-radius:50%;background:#fff;color:#6d7068;cursor:pointer}
+.account-drawer-nav{display:grid;gap:4px;padding:9px}
+.account-drawer-nav>button,.account-drawer-logout button{display:grid;width:100%;grid-template-columns:22px 1fr 16px;align-items:center;gap:11px;min-height:44px;padding:0 11px;border:0;border-radius:10px;background:#fff;color:#41443d;text-align:left;text-decoration:none;font:inherit;font-size:.86rem;cursor:pointer;transition:background .16s ease,color .16s ease,transform .16s ease}
+.account-drawer-nav>button:hover,.account-drawer-nav>button:focus-visible,.account-drawer-logout button:hover{background:#f5f3ee;color:#252722;transform:translateX(2px);outline:none}
+.account-drawer-nav>button.is-selected{background:#f1eee7;color:#292d29;font-weight:650}
+.account-drawer-nav>button>i:first-child,.account-drawer-logout button>i{color:#89714f;font-size:1rem}.account-drawer-nav>button>i:last-child{color:#aaa99f;font-size:.68rem;text-align:right}
+.account-drawer-logout{padding-top:5px;border-top:1px solid #efede8}.account-drawer-logout form{margin:0}.account-drawer-logout button{grid-template-columns:22px 1fr;color:#6a4b3a}
+.account-drawer-content{position:absolute;top:-1px;right:100%;z-index:121;width:min(470px,calc(100vw - 390px));max-height:min(76vh,680px);overflow:hidden;border:1px solid #e8e5dd;border-radius:18px 0 0 18px;background:#f7f7f4;box-shadow:0 22px 65px #1a1a162b;animation:account-drawer-in .18s ease both}
+.account-drawer-content-header{display:flex;align-items:center;gap:12px;min-height:44px;padding:7px 13px;background:#fff}
+.account-drawer-content-header>button{display:inline-flex;align-items:center;gap:6px;padding:5px 8px;border:0;border-radius:7px;background:transparent;color:#77796f;font:inherit;font-size:.72rem;white-space:nowrap;cursor:pointer}
+.account-drawer-content-header>button:hover{background:#f3f1ec;color:#292d29}.account-drawer-content-header>strong{overflow:hidden;color:#292d29;font-size:.83rem;text-overflow:ellipsis;white-space:nowrap}
+.account-drawer-content iframe{display:block;width:100%;height:min(76vh,680px);min-height:380px;border:0;background:#f5f5f1}
+@keyframes account-drawer-in{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:991.98px){.account-drawer-menu{top:100%;right:0}.account-drawer-content{position:relative;top:auto;right:auto;width:100%;max-height:58vh;margin-top:8px;border-radius:13px}.account-drawer-content iframe{height:min(58vh,500px);min-height:300px}}
+@media(max-width:520px){.account-drawer-menu{position:fixed;top:var(--account-drawer-top,100px);right:10px;width:calc(100vw - 20px);max-height:calc(100dvh - var(--account-drawer-top,100px) - 12px);overflow-y:auto;border-radius:15px}.account-drawer-content{max-height:50vh}.account-drawer-content iframe{height:min(50vh,470px);min-height:280px}}
+@media(prefers-reduced-motion:reduce){.account-drawer-menu,.account-drawer-content{animation:none}.account-drawer-trigger,.account-drawer-nav>button,.account-drawer-logout button{transition:none}}

@@ -1,0 +1,66 @@
+ /* Sidebar Styles */
+ .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.user-sidebar-logout-form { margin: 10px 0; }
+.user-sidebar-logout-link {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+.user-sidebar-logout-link:hover { background-color: #555; color: #fff !important; }
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 250px;
+    /* Sidebar width */
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Responsive Design: Make the sidebar collapse on smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}

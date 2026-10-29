@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sora:wght@100..800&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sora:wght@100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Sora:wght@100..800&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+        padding: 0.2rem 0 !important;
+        min-height: 45px;
+        background-color: #fff !important;
+        position: relative;
+    }
+
+    .navbar-brand {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    #logo {
+        height: 7rem !important;
+        width: auto;
+        max-width: 220px;
+        object-fit: contain;
+        margin: -1.5rem 0;
+        position: relative;
+    }
+
+    .navbar .container {
+        padding: 0 1rem;
+    }
+
+    .navbar-nav {
+        height: 45px;
+        align-items: center;
+    }
+
+.cart-container {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.cart-container.show {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.cart-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.cart-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-actions button {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/* Add styles for the payment modal */
+.modal-backdrop {
+    z-index: 1040 !important;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Modal styles */
+.modal.fade .modal-dialog {
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: translateY(0);
+}
+
+.payment-option {
+    transition: all 0.3s ease;
+    padding: 1rem;
+}
+
+.payment-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#inStoreButton:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+#deliveryButton:hover {
+    background-color: #198754;
+    color: white;
+}
+
+.modal {
+    z-index: 1045 !important;
+}
+
+/* Catalog product and category styles */
+
+.product-card {
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.category-filters {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Add this to your existing CSS - Category button styling */
+.category-btn {
+    position: relative;
+    width: 150px;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.category-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.category-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.category-btn:hover {
+    transform: translateY(-5px);
+}
+
+.category-btn:hover::before {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.category-btn.active {
+    box-shadow: 0 0 0 3px #292521;
+}
+
+/* Individual category backgrounds */
+.category-btn[data-type="all"] {
+    background-image: url('../../pictures/Category/bg-forall.jpg');
+}
+
+.category-btn[data-type="bed"] {
+    background-image: url('../../pictures/Category/bg-bed.png');
+}
+
+.category-btn[data-type="sofa"] {
+    background-image: url('../../pictures/Category/bg-sofa.png');
+}
+
+.category-btn[data-type="table"] {
+    background-image: url('../../pictures/Category/bg-table.png');
+}
+
+.category-btn[data-type="desk"] {
+    background-image: url('../../pictures/Category/bg-desk.png');
+}
+
+.category-btn[data-type="chair"] {
+    background-image: url('../../pictures/Category/bg-chair.png');
+}
+
+.category-btn[data-type="cabinet"] {
+    background-image: url('../../pictures/Category/bg-cabinets.png');
+}
+
+.furniture-section {
+    background-color: #eef3fa;/* Light gray/off-white color */
+    min-height: 100vh;
+    padding: 2rem 0;
+    margin: 0 rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section-background {
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+
+.product-card {
+    background-color: #ffffff;  /* White background for product cards */
+    border-radius: 15px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-wrapper {
+    display: flex;
+}
+
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-wrapper[style*="display: none"] {
+    display: none !important;
+}
+
+/* Pagination styles */
+.pagination {
+    margin-top: 2rem;
+}
+
+.page-link {
+    color: #212529;
+    border-color: #dee2e6;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover {
+    color: #000;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.page-item.active .page-link {
+    background-color: #212529;
+    border-color: #212529;
+    color: #fff;
+}
+
+.pagination .page-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.25);
+}
+
+/* Four compact cards per row on wide screens; preserve image crop and type scale. */
+.product-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card {
+    height: 100%;
+}
+
+.product-card .card-body {
+    padding: 0.9rem;
+}
+
+.product-card .card-title {
+    min-height: 2.8em;
+}
+
+.product-card .card-body > .mt-auto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.product-card .card-body > .mt-auto > h5,
+.product-card .card-body > .mt-auto > div {
+    flex-basis: 100%;
+}
+
+.product-card .card-body > .mt-auto .btn {
+    padding: 0.45rem 0.75rem;
+}
+
+@media (max-width: 575.98px) {
+    .product-img {
+        height: 155px;
+    }
+
+    .product-card .card-body {
+        padding: 0.7rem;
+    }
+
+    .product-card .card-title {
+        min-height: 2.8em;
+        font-size: 1.05rem;
+    }
+}
