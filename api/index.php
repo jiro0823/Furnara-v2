@@ -20,6 +20,16 @@ if (str_contains($requestPath, "\0") || preg_match('#(?:^|/)\.\.(?:/|$)#', $requ
     exit('Bad Request');
 }
 
+if ($requestPath === '/_health') {
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode([
+        'status' => 'ok',
+        'runtime' => 'php',
+        'mysqli' => extension_loaded('mysqli'),
+    ]);
+    exit;
+}
+
 $_SERVER['REQUEST_URI'] = $requestPath . ($queryString !== '' ? '?' . $queryString : '');
 $_SERVER['QUERY_STRING'] = $queryString;
 
