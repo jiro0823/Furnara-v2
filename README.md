@@ -47,6 +47,12 @@ The system brings furniture discovery and order handling into one web applicatio
 
 For XAMPP, start Apache and MySQL, configure the environment/database settings for the PHP process, and open the project through its local Apache URL. The URL helper in `includes/config.php` is intended to support both root and subdirectory installations.
 
+## Vercel deployment
+
+The repository includes a Vercel configuration that runs PHP requests through a single community PHP runtime function and serves existing assets as static files. Connect the repository to Vercel with the project root set to the repository root. Add the five `FURNARA_DB_*` variables listed above to the Vercel project's Production and Preview environments, pointing them to a publicly reachable managed MySQL/MariaDB service. Apply the database migrations to that database before opening the application. A local XAMPP database is not reachable from Vercel.
+
+Vercel Functions use a read-only deployment filesystem. If the live application needs to accept or persist product image uploads, configure external object storage or another persistent storage service before enabling those workflows. Confirm the deployment logs and test storefront, static assets, sign-in, and database-backed actions after deployment.
+
 ## Project structure
 
 | Path | Responsibility |
